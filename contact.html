@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact the author of Astronomad." />
+  <title>Contact — Astronomad</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span>✦</span> Astronomad</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="deep-space.html">Deep Space</a></li>
+        <li><a href="missions.html">Missions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        <li><a href="login.html" id="authLink" class="auth-link">🔐 Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
+        <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="page-header">
+      <span class="badge">📬 Get in touch</span>
+      <h1>Contact <span class="gradient-text">Me</span></h1>
+      <p>Have a question about space or a project idea? Reach out directly or use the form below.</p>
+    </section>
+    <section class="container section" style="padding-top:0">
+      <div class="grid">
+        <div class="card contact-card"><div class="icon">📞</div><h3>Call or text</h3><p><a href="tel:+77770639509">8 777 063 9509</a></p><p class="hint">Available 9:00–20:00 (Astana time)</p></div>
+        <div class="card contact-card"><div class="icon">📧</div><h3>Email me</h3><p><a href="mailto:s_balaussa07@mail.ru">s_balaussa07@mail.ru</a></p><p class="hint">I usually reply within 24 hours.</p></div>
+        <div class="card contact-card"><div class="icon">📍</div><h3>Location</h3><p>Astana, Kazakhstan</p><p class="hint">Group SE-2505</p></div>
+      </div>
+    </section>
+
+    <section class="container container-narrow section" style="padding-top:0">
+      <h2 class="section-title">Send a <span class="gradient-text">message</span></h2>
+      <form id="contactForm" class="form-card" novalidate>
+        <div class="field">
+          <label for="cName">Full name *</label>
+          <input type="text" id="cName" autocomplete="name" placeholder="John Doe" />
+          <small class="error-msg" id="cNameError"></small>
+        </div>
+        <div class="field">
+          <label for="cEmail">Email address *</label>
+          <input type="text" id="cEmail" inputmode="email" autocomplete="email" placeholder="john@example.com" />
+          <small class="error-msg" id="cEmailError"></small>
+        </div>
+        <div class="field">
+          <label for="cPhone">Phone (optional)</label>
+          <input type="text" id="cPhone" inputmode="tel" autocomplete="tel" placeholder="+7 777 123 45 67" />
+          <small class="hint">Leave a number if you want a call back.</small>
+          <small class="error-msg" id="cPhoneError"></small>
+        </div>
+        <div class="field">
+          <label for="cMessage">Message *</label>
+          <textarea id="cMessage" rows="5" placeholder="Write your message (at least 10 characters)…"></textarea>
+          <small class="hint" id="cCounter" style="text-align:right">0 / 500</small>
+          <small class="error-msg" id="cMessageError"></small>
+        </div>
+        <button type="submit" id="contactSubmit" class="btn btn-primary btn-block">Send message ✉️</button>
+        <p class="form-status" id="contactStatus" role="status"></p>
+      </form>
+    </section>
+
+    <section class="container container-narrow section faq" style="padding-top:0">
+      <h2 class="section-title">Frequently asked <span class="gradient-text">questions</span></h2>
+      <details><summary>How long does it take you to reply?</summary><p>Usually within 24 hours, especially on weekdays. If it’s urgent, call me directly.</p></details>
+      <details><summary>Can we collaborate on a project?</summary><p>Yes! I’m open to web-development and astronomy-related projects. Use the form or email me your idea.</p></details>
+      <details><summary>Where do the images come from?</summary><p>All pictures are loaded live from NASA’s public Image and Video Library, so they stay accurate and credited.</p></details>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>✦ Astronomad</h4>
+          <p>Exploring the universe, one page at a time. Real NASA images, real science.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="planets.html">Planets</a>
+          <a href="deep-space.html">Deep Space</a>
+          <a href="missions.html">Missions</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Author</h4>
+          <p><strong>Smail Balaussa</strong></p>
+          <p>Group SE-2505 · Astana, Kazakhstan</p>
+          <p>Images &amp; data: NASA Image and Video Library</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year">2026</span> Astronomad · Smail Balaussa. All rights reserved.</div>
+    </div>
+  </footer>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <script src="js/validation.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</body>
+</html>

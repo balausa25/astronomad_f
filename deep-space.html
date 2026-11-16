@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nebulae, galaxies and telescopes with live search and filters." />
+  <title>Deep Space — Astronomad</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span>✦</span> Astronomad</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="deep-space.html" class="active" aria-current="page">Deep Space</a></li>
+        <li><a href="missions.html">Missions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="authLink" class="auth-link">🔐 Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
+        <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="page-header">
+      <span class="badge">🌌 Beyond the Solar System</span>
+      <h1>Deep <span class="gradient-text">Space</span></h1>
+      <p>Nebulae, galaxies and the farthest reaches of the universe, captured by NASA’s most powerful telescopes.</p>
+    </section>
+    <section class="container section" style="padding-top:0">
+      <div class="toolbar">
+        <div class="search-box">
+          <label for="spaceSearch" class="sr-only">Search deep space</label>
+          <input type="text" id="spaceSearch" class="search-input" placeholder="🔦 Search & highlight… (e.g. galaxy, Webb)" autocomplete="off" />
+        </div>
+        <div class="chips" role="group" aria-label="Filter by category">
+          <button type="button" class="chip active" data-category="all">All</button>
+          <button type="button" class="chip" data-category="nebula">Nebulae</button>
+          <button type="button" class="chip" data-category="galaxy">Galaxies</button>
+          <button type="button" class="chip" data-category="telescope">Telescopes</button>
+        </div>
+        <button type="button" class="btn btn-outline" id="spaceClear" style="padding:0.4rem 1.1rem;font-size:0.85rem">Reset filters</button>
+      </div>
+      <p class="result-count" id="spaceCount" aria-live="polite"></p>
+      
+      <article class="media-row js-item" data-category="nebula">
+        <img class="media-img" src="images/placeholder.svg" data-nasa-query="Carina Nebula Webb cosmic cliffs" alt="Carina Nebula — “Cosmic Cliffs”" loading="lazy" />
+        <div class="media-text">
+          <span class="badge" style="width:fit-content">🌟 Star birth</span>
+          <h3 class="hl-target">Carina Nebula — “Cosmic Cliffs”</h3>
+          <p class="hl-target">Webb’s infrared view of the Carina Nebula reveals areas of star birth that were hidden before. About 7,600 light-years away, this landscape of gas and dust is the edge of a giant star-forming region, and its tallest “peaks” are roughly 7 light-years high.</p>
+          <p class="credit">Credit: NASA, ESA, CSA, STScI</p>
+        </div>
+      </article>
+      <article class="media-row js-item" data-category="galaxy">
+        <img class="media-img" src="images/placeholder.svg" data-nasa-query="Stephan's Quintet Webb" alt="Stephan’s Quintet" loading="lazy" />
+        <div class="media-text">
+          <span class="badge" style="width:fit-content">🌌 Galaxy interaction</span>
+          <h3 class="hl-target">Stephan’s Quintet</h3>
+          <p class="hl-target">A visual grouping of five galaxies, photographed by Webb in great detail. Four of them are interacting in a cosmic dance that may eventually merge them. The mosaic holds over 150 million pixels and was built from nearly 1,000 image files.</p>
+          <p class="credit">Credit: NASA, ESA, CSA, STScI</p>
+        </div>
+      </article>
+      <article class="media-row js-item" data-category="galaxy">
+        <img class="media-img" src="images/placeholder.svg" data-nasa-query="Webb First Deep Field SMACS 0723" alt="Webb’s First Deep Field" loading="lazy" />
+        <div class="media-text">
+          <span class="badge" style="width:fit-content">🔭 Distant universe</span>
+          <h3 class="hl-target">Webb’s First Deep Field</h3>
+          <p class="hl-target">The deepest, sharpest infrared image of the distant universe taken at its release. The patch of sky is about the size of a grain of sand held at arm’s length and holds thousands of galaxies, some of them seen as they were over 13 billion years ago.</p>
+          <p class="credit">Credit: NASA, ESA, CSA, STScI</p>
+        </div>
+      </article>
+      <article class="media-row js-item" data-category="nebula">
+        <img class="media-img" src="images/placeholder.svg" data-nasa-query="Southern Ring Nebula Webb" alt="Southern Ring Nebula" loading="lazy" />
+        <div class="media-text">
+          <span class="badge" style="width:fit-content">💫 Stellar death</span>
+          <h3 class="hl-target">Southern Ring Nebula</h3>
+          <p class="hl-target">A planetary nebula about 2,500 light-years away, imaged by Webb’s NIRCam and MIRI instruments. A dying star sheds its outer layers in rings of gas and dust, giving a glimpse of how our own Sun will end its life billions of years from now.</p>
+          <p class="credit">Credit: NASA, ESA, CSA, STScI</p>
+        </div>
+      </article>
+      <article class="media-row js-item" data-category="telescope">
+        <img class="media-img" src="images/placeholder.svg" data-nasa-query="Hubble Space Telescope" alt="Hubble Space Telescope" loading="lazy" />
+        <div class="media-text">
+          <span class="badge" style="width:fit-content">🛰️ Observatory</span>
+          <h3 class="hl-target">Hubble Space Telescope</h3>
+          <p class="hl-target">Launched in 1990, Hubble has made over 1.5 million observations. It helped pin down the age of the universe and captured iconic images such as the Pillars of Creation.</p>
+          <p class="credit">Credit: NASA, ESA, CSA, STScI</p>
+        </div>
+      </article>
+      <div class="empty-state hidden" id="spaceEmpty"><h3>Nothing found</h3><p>Try a different keyword or category.</p></div>
+    </section>
+
+    <section class="container section">
+      <h2 class="section-title">Mind-blowing <span class="gradient-text">Fact</span></h2>
+      <div class="fact reveal" style="max-width:850px;margin:0 auto;font-size:1.1rem">
+        Even at the speed of light (about 300,000 km/s), crossing the Milky Way takes roughly <strong>100,000 years</strong>. And our galaxy is just one of hundreds of billions in the observable universe.
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>✦ Astronomad</h4>
+          <p>Exploring the universe, one page at a time. Real NASA images, real science.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="planets.html">Planets</a>
+          <a href="deep-space.html">Deep Space</a>
+          <a href="missions.html">Missions</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Author</h4>
+          <p><strong>Smail Balaussa</strong></p>
+          <p>Group SE-2505 · Astana, Kazakhstan</p>
+          <p>Images &amp; data: NASA Image and Video Library</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year">2026</span> Astronomad · Smail Balaussa. All rights reserved.</div>
+    </div>
+  </footer>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <script src="js/validation.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/nasa.js" defer></script>
+  <script src="js/filterable.js" defer></script>
+  <script src="js/deep-space.js" defer></script>
+</body>
+</html>

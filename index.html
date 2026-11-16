@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Astronomad: planets, deep space, NASA missions and a live NASA image gallery." />
+  <title>Astronomad — Explore the Universe</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span>✦</span> Astronomad</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="deep-space.html">Deep Space</a></li>
+        <li><a href="missions.html">Missions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="authLink" class="auth-link">🔐 Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
+        <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge" id="heroBadge">🌌 Welcome to Astronomad</span>
+        <h1>Explore the <span class="gradient-text">Universe</span></h1>
+        <p>Real images. Real science. Journey through planets, galaxies and NASA missions — your adventure beyond Earth starts here.</p>
+        <div class="hero-buttons">
+          <a href="planets.html" class="btn btn-primary">🪐 Explore Planets</a>
+          <a href="gallery.html" class="btn btn-outline">🔭 NASA Gallery</a>
+          <button type="button" class="btn btn-outline" data-open-popup>📡 Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container container-narrow">
+      <div class="stat-card" style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap">
+        <span style="font-size:1.6rem" aria-hidden="true">🕒</span>
+        <div><small class="hint">Current date &amp; time (live)</small><strong id="dateTime" style="color:var(--accent)">Loading…</strong></div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">Featured <span class="gradient-text">Cosmic Wonders</span></h2>
+      <p class="section-sub">Images pulled live from NASA’s public image library.</p>
+      <div class="grid grid-lg">
+        <article class="card reveal">
+          <img class="card-img" src="images/placeholder.svg" data-nasa-query="Carina Nebula Webb cosmic cliffs" alt="Carina Nebula" loading="lazy" />
+          <div class="card-body"><h3>Carina Nebula</h3>
+            <p>Webb’s “Cosmic Cliffs” reveal a star-forming region about 7,600 light-years away, with peaks up to 7 light-years tall.</p>
+            <a class="card-link" href="deep-space.html">Read more →</a></div>
+        </article>
+        <article class="card reveal">
+          <img class="card-img" src="images/placeholder.svg" data-nasa-query="Saturn Cassini rings" alt="Saturn and its rings" loading="lazy" />
+          <div class="card-body"><h3>Saturn’s Rings</h3>
+            <p>Billions of pieces of ice and rock make up the rings. Saturn is the least dense planet — it would float on water.</p>
+            <a class="card-link" href="planets.html">Read more →</a></div>
+        </article>
+        <article class="card reveal">
+          <img class="card-img" src="images/placeholder.svg" data-nasa-query="Perseverance rover Jezero Mars" alt="Perseverance rover on Mars" loading="lazy" />
+          <div class="card-body"><h3>Perseverance on Mars</h3>
+            <p>The rover explores Jezero Crater, searching for signs of ancient life and collecting samples for a future return to Earth.</p>
+            <a class="card-link" href="missions.html">Read more →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section-title">The Universe in <span class="gradient-text">Numbers</span></h2>
+      <div class="grid">
+        <div class="stat-card reveal"><span class="stat-number" data-count="13.8" data-decimals="1" data-suffix="B">13.8B</span><span class="stat-label">Years since the Big Bang</span></div>
+        <div class="stat-card reveal"><span class="stat-number" data-count="8">8</span><span class="stat-label">Planets in our Solar System</span></div>
+        <div class="stat-card reveal"><span class="stat-number" data-count="100" data-suffix="B+">100B+</span><span class="stat-label">Stars in the Milky Way (estimate)</span></div>
+        <div class="stat-card reveal"><span class="stat-number" data-count="400" data-suffix="+">400+</span><span class="stat-label">Known moons in the Solar System</span></div>
+      </div>
+    </section>
+
+    <section class="section container container-narrow">
+      <h2 class="section-title">Did You <span class="gradient-text">Know?</span></h2>
+      <div style="display:grid;gap:1rem">
+        <div class="fact reveal"><strong>🌌 A day on Venus is longer than its year.</strong> It takes 243 Earth days to rotate once, but only 225 to orbit the Sun.</div>
+        <div class="fact reveal"><strong>🌑 Neutron stars are unimaginably dense.</strong> A teaspoon of neutron-star material would weigh billions of tons on Earth.</div>
+        <div class="fact reveal"><strong>🚀 There are more trees on Earth than stars in the Milky Way.</strong> About 3 trillion trees versus 100–400 billion stars.</div>
+      </div>
+    </section>
+
+    <section class="section container container-narrow">
+      <div class="card reveal" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;padding:1.8rem">
+        <img class="avatar" style="margin:0" src="images/author.jpg" alt="Smail Balaussa" onerror="this.onerror=null;this.src='images/placeholder.svg'" />
+        <div style="flex:1;min-width:230px">
+          <span class="badge">👨‍💻 Author</span>
+          <h2>Created by <span class="gradient-text">Smail Balaussa</span></h2>
+          <p style="margin:0.6rem 0 1rem">Student from Astana, group SE-2505. Passionate about space, AI, music and books.</p>
+          <a href="about.html" class="btn btn-primary">About me →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container container-narrow">
+      <div class="form-card" style="text-align:center">
+        <h2>Ready to begin your cosmic journey?</h2>
+        <p style="margin:0.6rem 0 1.4rem">Subscribe for weekly astronomy updates, stunning images and fascinating facts.</p>
+        <button type="button" class="btn btn-primary" data-open-popup>Subscribe now</button>
+      </div>
+    </section>
+
+    <div id="popupOverlay" class="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup">
+        <button type="button" id="closePopup" class="close-btn" aria-label="Close">&times;</button>
+        <div class="icon" aria-hidden="true">📡</div>
+        <h3 id="popupTitle">Join the Astronomad newsletter</h3>
+        <p style="margin:0.5rem 0 1.2rem">Get the latest space news, delivered weekly.</p>
+        <form id="subscribeForm" novalidate style="text-align:left">
+          <div class="field">
+            <label for="subEmail">Email address</label>
+            <input type="text" id="subEmail" inputmode="email" autocomplete="email" placeholder="you@example.com" />
+            <small class="error-msg" id="subEmailError"></small>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+          <p class="form-status" id="subStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>✦ Astronomad</h4>
+          <p>Exploring the universe, one page at a time. Real NASA images, real science.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="planets.html">Planets</a>
+          <a href="deep-space.html">Deep Space</a>
+          <a href="missions.html">Missions</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Author</h4>
+          <p><strong>Smail Balaussa</strong></p>
+          <p>Group SE-2505 · Astana, Kazakhstan</p>
+          <p>Images &amp; data: NASA Image and Video Library</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year">2026</span> Astronomad · Smail Balaussa. All rights reserved.</div>
+    </div>
+  </footer>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <script src="js/validation.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/nasa.js" defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+</html>

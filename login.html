@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create an account or log in to Astronomad." />
+  <title>Login / Sign up — Astronomad</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span>✦</span> Astronomad</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="deep-space.html">Deep Space</a></li>
+        <li><a href="missions.html">Missions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="authLink" class="auth-link active">🔐 Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
+        <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="auth-wrap">
+      <div class="auth-tabs" role="tablist">
+        <button type="button" class="chip active" id="tabSignup" role="tab" aria-selected="true">Sign up</button>
+        <button type="button" class="chip" id="tabLogin" role="tab" aria-selected="false">Log in</button>
+      </div>
+
+      <form id="signupForm" class="form-card" novalidate>
+        <h2 style="text-align:center;margin-bottom:1.2rem">Create an account</h2>
+        <div class="field"><label for="regName">Full name</label>
+          <input type="text" id="regName" autocomplete="name" placeholder="John Doe" />
+          <small class="error-msg" id="regNameError"></small></div>
+        <div class="field"><label for="regEmail">Email address</label>
+          <input type="text" id="regEmail" inputmode="email" autocomplete="email" placeholder="you@example.com" />
+          <small class="error-msg" id="regEmailError"></small></div>
+        <div class="field"><label for="regPhone">Phone number</label>
+          <input type="text" id="regPhone" inputmode="tel" autocomplete="tel" placeholder="+7 777 123 45 67" />
+          <small class="error-msg" id="regPhoneError"></small></div>
+        <div class="field"><label for="regPassword">Password</label>
+          <div class="pw-wrap"><input type="password" id="regPassword" autocomplete="new-password" placeholder="Min 8 chars, upper + lower + number" />
+          <button type="button" class="pw-toggle" data-target="regPassword" aria-label="Show or hide password">👁️</button></div>
+          <div class="strength" aria-hidden="true"><span></span></div>
+          <small class="error-msg" id="regPasswordError"></small></div>
+        <div class="field"><label for="regConfirm">Confirm password</label>
+          <input type="password" id="regConfirm" autocomplete="new-password" placeholder="Repeat password" />
+          <small class="error-msg" id="regConfirmError"></small></div>
+        <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+        <p class="form-status error" id="signupStatus" role="status"></p>
+        <p class="hint" style="text-align:center;margin-top:0.6rem">Demo only: data is stored in your browser (localStorage).</p>
+      </form>
+
+      <form id="loginForm" class="form-card hidden" novalidate>
+        <h2 style="text-align:center;margin-bottom:1.2rem">Welcome back</h2>
+        <div class="field"><label for="loginEmail">Email address</label>
+          <input type="text" id="loginEmail" inputmode="email" autocomplete="email" placeholder="you@example.com" />
+          <small class="error-msg" id="loginEmailError"></small></div>
+        <div class="field"><label for="loginPassword">Password</label>
+          <div class="pw-wrap"><input type="password" id="loginPassword" autocomplete="current-password" placeholder="Your password" />
+          <button type="button" class="pw-toggle" data-target="loginPassword" aria-label="Show or hide password">👁️</button></div>
+          <small class="error-msg" id="loginPasswordError"></small></div>
+        <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        <p class="form-status" id="loginStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>✦ Astronomad</h4>
+          <p>Exploring the universe, one page at a time. Real NASA images, real science.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="planets.html">Planets</a>
+          <a href="deep-space.html">Deep Space</a>
+          <a href="missions.html">Missions</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Author</h4>
+          <p><strong>Smail Balaussa</strong></p>
+          <p>Group SE-2505 · Astana, Kazakhstan</p>
+          <p>Images &amp; data: NASA Image and Video Library</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year">2026</span> Astronomad · Smail Balaussa. All rights reserved.</div>
+    </div>
+  </footer>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <script src="js/validation.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

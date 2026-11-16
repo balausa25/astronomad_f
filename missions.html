@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NASA missions with live search and status filters." />
+  <title>Missions — Astronomad</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span>✦</span> Astronomad</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="planets.html">Planets</a></li>
+        <li><a href="deep-space.html">Deep Space</a></li>
+        <li><a href="missions.html" class="active" aria-current="page">Missions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="authLink" class="auth-link">🔐 Login</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle light/dark mode">☀️</button>
+        <button type="button" class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="page-header">
+      <span class="badge">🚀 Exploring Space</span>
+      <h1>NASA <span class="gradient-text">Missions</span></h1>
+      <p>From the James Webb Space Telescope to Perseverance and Artemis — the missions pushing the boundaries of knowledge.</p>
+    </section>
+    <section class="container section" style="padding-top:0">
+      <h2 class="section-title">Flagship <span class="gradient-text">Missions</span></h2>
+      <div class="grid grid-lg" style="margin-bottom:3rem">
+        <article class="card reveal"><img class="card-img" src="images/placeholder.svg" data-nasa-query="James Webb Space Telescope mirror" alt="James Webb Space Telescope" loading="lazy" /><div class="card-body"><h3>James Webb Space Telescope</h3><p>The most powerful space telescope ever built, observing the universe in infrared.</p></div></article>
+        <article class="card reveal"><img class="card-img" src="images/placeholder.svg" data-nasa-query="Perseverance rover selfie" alt="Perseverance rover" loading="lazy" /><div class="card-body"><h3>Perseverance Rover</h3><p>Searching for ancient microbial life in Mars’ Jezero Crater.</p></div></article>
+        <article class="card reveal"><img class="card-img" src="images/placeholder.svg" data-nasa-query="Hubble Space Telescope in orbit" alt="Hubble Space Telescope" loading="lazy" /><div class="card-body"><h3>Hubble Space Telescope</h3><p>Launched in 1990, it revolutionised astronomy and still operates today.</p></div></article>
+      </div>
+
+      <h2 class="section-title">Mission <span class="gradient-text">Details</span></h2>
+      <div class="toolbar">
+        <div class="search-box">
+          <label for="missionSearch" class="sr-only">Search missions</label>
+          <input type="text" id="missionSearch" class="search-input" placeholder="🔍 Search missions… (e.g. Mars, Moon, Jupiter)" autocomplete="off" />
+        </div>
+        <div class="chips" role="group" aria-label="Filter by status">
+          <button type="button" class="chip active" data-category="all">All</button>
+          <button type="button" class="chip" data-category="active">Active</button>
+          <button type="button" class="chip" data-category="completed">Completed</button>
+          <button type="button" class="chip" data-category="upcoming">Upcoming</button>
+        </div>
+        <button type="button" class="btn btn-outline" id="missionClear" style="padding:0.4rem 1.1rem;font-size:0.85rem">Reset filters</button>
+      </div>
+      <p class="result-count" id="missionCount" aria-live="polite"></p>
+      <div class="mission-list">
+        <article class="mission-card js-item reveal" data-category="active">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">🔭</span>
+            <h3 class="hl-target" style="flex:1">James Webb Space Telescope</h3><span class="status active">Active</span></div>
+          <p class="hl-target">Launched in December 2021, Webb orbits about 1.5 million km from Earth and observes in infrared light. Its 6.5 m gold-coated mirror collects roughly six times more light than Hubble’s, revealing early galaxies and exoplanet atmospheres.</p>
+        </article>
+        <article class="mission-card js-item reveal" data-category="active">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">🔴</span>
+            <h3 class="hl-target" style="flex:1">Perseverance Mars Rover</h3><span class="status active">Active</span></div>
+          <p class="hl-target">Landed in Jezero Crater in February 2021 to search for signs of ancient microbial life. It cached rock samples for a future return to Earth, carried the Ingenuity helicopter (the first powered flight on another planet) and tested oxygen production with MOXIE.</p>
+        </article>
+        <article class="mission-card js-item reveal" data-category="completed">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">🌕</span>
+            <h3 class="hl-target" style="flex:1">Artemis II</h3><span class="status completed">Completed</span></div>
+          <p class="hl-target">In April 2026 four astronauts flew around the Moon aboard Orion — the first crewed lunar flyby since Apollo. It tested the systems needed for later missions, with Artemis III planned as the next step, currently targeted for 2027.</p>
+        </article>
+        <article class="mission-card js-item reveal" data-category="active">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">🪐</span>
+            <h3 class="hl-target" style="flex:1">Juno — Jupiter Orbiter</h3><span class="status active">Active</span></div>
+          <p class="hl-target">Orbiting Jupiter since 2016, Juno studies its atmosphere, magnetic field and interior. It found cyclones clustered at the poles and hints that the planet’s core is “fuzzy” rather than solid.</p>
+        </article>
+        <article class="mission-card js-item reveal" data-category="active">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">☀️</span>
+            <h3 class="hl-target" style="flex:1">Parker Solar Probe</h3><span class="status active">Active</span></div>
+          <p class="hl-target">The first spacecraft to fly through the Sun’s corona. It samples particles and magnetic fields, improving our understanding of the solar wind and space weather, and reached about 692,000 km/h — the fastest human-made object.</p>
+        </article>
+        <article class="mission-card js-item reveal" data-category="active">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">🌌</span>
+            <h3 class="hl-target" style="flex:1">Voyager 1 &amp; 2</h3><span class="status active">Active</span></div>
+          <p class="hl-target">Launched in 1977, both probes are now in interstellar space. Voyager 1 is the most distant human-made object, more than 24 billion km from Earth. Each carries a Golden Record as a message to any future discoverers.</p>
+        </article>
+        <article class="mission-card js-item reveal" data-category="active">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">🧊</span>
+            <h3 class="hl-target" style="flex:1">Europa Clipper</h3><span class="status active">En route</span></div>
+          <p class="hl-target">Launched in October 2024, it is travelling to Jupiter’s icy moon Europa to study its subsurface ocean and whether it could support life. Arrival is planned for 2030.</p>
+        </article>
+        <article class="mission-card js-item reveal" data-category="upcoming">
+          <div class="mission-head"><span class="mission-icon" aria-hidden="true">🚁</span>
+            <h3 class="hl-target" style="flex:1">Dragonfly</h3><span class="status upcoming">Upcoming</span></div>
+          <p class="hl-target">A rotorcraft lander designed to fly across the dunes of Saturn’s moon Titan. Launch is planned for 2028.</p>
+        </article>
+      </div>
+      <div class="empty-state hidden" id="missionEmpty"><h3>No missions found</h3><p>Try another keyword or status.</p></div>
+    </section>
+
+    <section class="container section container-narrow">
+      <h2 class="section-title">Recent &amp; Upcoming <span class="gradient-text">Milestones</span></h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Mission</th><th scope="col">Target</th><th scope="col">Date</th></tr></thead>
+          <tbody>
+            <tr><td>Europa Clipper</td><td class="muted">Jupiter’s moon Europa</td><td class="muted">Launched Oct 2024 · arrives 2030</td></tr>
+            <tr><td>Artemis II</td><td class="muted">Lunar flyby (crewed)</td><td class="muted">Flown April 2026</td></tr>
+            <tr><td>Artemis III</td><td class="muted">Next crewed Artemis mission</td><td class="muted">Targeted 2027 (may change)</td></tr>
+            <tr><td>Dragonfly</td><td class="muted">Saturn’s moon Titan</td><td class="muted">Planned 2028</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="hint" style="text-align:center;margin-top:0.8rem">Schedules change often — check nasa.gov for the latest dates.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>✦ Astronomad</h4>
+          <p>Exploring the universe, one page at a time. Real NASA images, real science.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="planets.html">Planets</a>
+          <a href="deep-space.html">Deep Space</a>
+          <a href="missions.html">Missions</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Author</h4>
+          <p><strong>Smail Balaussa</strong></p>
+          <p>Group SE-2505 · Astana, Kazakhstan</p>
+          <p>Images &amp; data: NASA Image and Video Library</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© <span id="year">2026</span> Astronomad · Smail Balaussa. All rights reserved.</div>
+    </div>
+  </footer>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <script src="js/validation.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/auth.js" defer></script>
+  <script src="js/nasa.js" defer></script>
+  <script src="js/filterable.js" defer></script>
+  <script src="js/missions.js" defer></script>
+</body>
+</html>
